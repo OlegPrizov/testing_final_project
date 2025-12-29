@@ -22,9 +22,11 @@
 ## Как запустить мобильные тесты?
 - установить Android SDK
 - Добавить переменные окружения
-`export ANDROID_HOME="$HOME/Library/Android/sdk"`
-`export ANDROID_SDK_ROOT="$ANDROID_HOME"`
-`export PATH="$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator"`
+```
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export ANDROID_SDK_ROOT="$ANDROID_HOME"
+export PATH="$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator"
+```
 - Установить Appium и драйвер UiAutomator2
 - Запустить Appium Server
 - Запустить эмулятор или подключите устройство.
