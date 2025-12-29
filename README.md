@@ -20,9 +20,16 @@
 - `mvn test -Dgroups=web`
 
 ## Как запустить мобильные тесты?
-Аминь
-
-## Примечания
-- Драйверы браузеров ставятся автоматически через WebDriverManager; Chrome стартует в maximized.
-- Мобильные тесты используют UiAutomator2 и `noReset=true`; онбординг пропускается, если доступна кнопка Skip.
-- Все ключевые параметры можно переопределять через системные свойства без правок кода.
+- установить Android SDK
+- Добавить переменные окружения
+`export ANDROID_HOME="$HOME/Library/Android/sdk"
+export ANDROID_SDK_ROOT="$ANDROID_HOME"
+export PATH="$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator"`
+- Установить Appium и драйвер UiAutomator2
+- Запустить Appium Server
+- Запустить эмулятор или подключите устройство.
+- Запустить только мобильные тесты
+`mvn test -Dgroups=mobile \
+  -DappiumServerUrl=http://127.0.0.1:4723/wd/hub \
+  -DdeviceName="emulator-5554" \
+  -DplatformVersion=16`

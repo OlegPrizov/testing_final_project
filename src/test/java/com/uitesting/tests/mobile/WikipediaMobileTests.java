@@ -51,9 +51,9 @@ public class WikipediaMobileTests extends BaseMobileTest {
     @Test(groups = "mobile")
     public void openArticleFromSearch() {
         searchPage.openSearch();
-        searchPage.typeQuery("Software testing");
+        searchPage.typeQuery("Russia");
 
-        String selectedTitle = searchPage.openResultWithText("Software testing");
+        String selectedTitle = searchPage.openResultWithText("Russia");
         ArticlePage articlePage = new ArticlePage(driver, wait);
         String openedTitle = articlePage.waitForTitleContaining(selectedTitle);
 
