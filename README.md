@@ -31,7 +31,7 @@ export PATH="$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator"
 - Запустить Appium Server
 - Запустить эмулятор или подключите устройство.
 - Запустить только мобильные тесты
-`mvn test -Dgroups=mobile \
+```mvn test -Dgroups=mobile \
   -DappiumServerUrl=http://127.0.0.1:4723/wd/hub \
   -DdeviceName="emulator-5554" \
-  -DplatformVersion=16`
+  -DplatformVersion=16```
